@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\margl1440\margr1440\vieww20060\viewh16220\viewkind0
+\deftab720
+\pard\pardeftab720\sa240
+
+\f0\fs24 \cf0 Your younger sister is putting on a puppet show in your family's back yard. She has left you in charge of ticketing the big event. She has informed you that she wants assigned seating. She plans on setting up 33 seats; 3 rows with 11 seats each. She already has several seats reserved for her parents and best friends. Being a good computer scientist, you decide to whip up a quick program to help her out.\
+\pard\pardeftab720\sa280
+
+\b\fs36 \cf0 Instructions\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf0 Write two functions, "build" and "reserve", as described below\
+\pard\pardeftab720\sa280
+
+\f1\b\fs36 \cf0 build(rows, cols, reserved)
+\f0 \
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf0 Simply builds and returns a data structure to represent a seating map. 
+\i See the "Initial Data" section below for the default arguments.
+\i0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\f2 \cf0 {\listtext	\'95	}rows
+\f0 : (int) the number of rows\
+\ls1\ilvl0
+\f2 {\listtext	\'95	}cols
+\f0 : (int) the number of columns (a.k.a. seats per row)\
+\ls1\ilvl0
+\f2 {\listtext	\'95	}reserved
+\f0 : (array) a 1D array of strings representing the seats that are already reserved (formatted as 
+\f2 "R1C1"
+\f0 )\
+\pard\pardeftab720\sa280
+
+\f1\b\fs36 \cf0 reserve(map, n)
+\f0 \
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf0 Reserves the best available (see "Additional Notes" below) contiguous block of n seats and returns map with those seats reserved\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0
+\f2 \cf0 {\listtext	\'95	}map
+\f0 : (data structure/object/struct) the data structure from the build function used to represent your seating map\
+\ls2\ilvl0
+\f2 {\listtext	\'95	}n
+\f0 : (int) the number of contiguous seats in a row someone is looking to reserve\
+\pard\pardeftab720\sa240
+\cf0 The reserve function should:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0\cf0 {\listtext	1.	}Find the best available seats\
+{\listtext	2.	}Mark those seats as reserved in the seating map\
+{\listtext	3.	}Print the start and end seats that were just reserved (e.g. 
+\f2 reserve(map, 3)
+\f0  could print 
+\f2 "R1C4-R1C6"
+\f0 )\
+{\listtext	4.	}Return map with these seated now reserved\
+{\listtext	5.	}If its not possible to fulfill a request, print 
+\f2 "Not Available"
+\f0  and return the map as is\
+\pard\pardeftab720\sa280
+
+\b\fs36 \cf0 Initial Data\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf0 Your starting map should have these 6 seats reserved for parents and friends:\uc0\u8232 R1C4 R1C6 R2C3 R2C7 R3C9 R3C10\
+By default, per your sisters initial seating map, your build method should be called with\uc0\u8232 
+\f2 build(3, 11, ["R1C4","R1C6","R2C3","R2C7","R3C9","R3C10"])
+\f0 \
+\pard\pardeftab720\sa280
+
+\b\fs36 \cf0 Additional Notes\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls4\ilvl0
+\b0\fs24 \cf0 {\listtext	\'95	}Always try to reserve the best available block of seats. How "good" a particular seat is is simply the Manhattan Distance from the front center seat (in this case R1C5).\
+{\listtext	\'95	}The solution should be flexible enough so that it can work well with a variable number of seats and rows\
+{\listtext	\'95	}The max number of tickets someone can request at once is 10\
+{\listtext	\'95	}You are to choose the data structure of your choice for representing the map\
+{\listtext	\'95	}Seat reservations cannot span more than one row, e.g. for a 2 seat request, R1C3-R1C4 is valid but R1C3-R2C3 is not\
+\pard\pardeftab720\sa280
+
+\b\fs36 \cf0 Solutions Judged On\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls5\ilvl0
+\b0\fs24 \cf0 {\listtext	\'95	}Performance (but don't get too hung up here, after all "premature optimization is the root of all evil")\
+{\listtext	\'95	}Clean, concise, commented code\
+{\listtext	\'95	}Bonus for clever solutions\
+\pard\pardeftab720\sa280
+
+\b\fs36 \cf0 Submission\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf0 Email Solutions to the 1 <<3 | 0xC0DE @showclix.com (local name evaluated and in base 10 format, e.g. 1234@showclix.com)\
+We are looking for clever, well-documented and efficient solutions, although don't get too caught up with nitty gritty optimization. You may write the solution in whatever language you are most comfortable with. If you have any recent source code you would like to share (or a GitHub account) please feel free to do so as well.\
+}
